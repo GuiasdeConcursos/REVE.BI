@@ -336,13 +336,11 @@ class sitePromoax_01_11:
             self.SessionID = params.get("SessionID", [None])[0]
             self.SubSessionID = params.get("SubSessionID", [None])[0]
 
-    def baixar_csv(self, url):
+    async def baixar_csv(self, url):
         try:
             url_csv = f"http://taruma.promaxcloud.com.br{url}"
             response = requests.get(url_csv)
             response.raise_for_status()
-
-            print("Salvando molho...")
 
             with open(self.path_savar_csv, "wb") as arquivo_csv:
                 arquivo_csv.write(response.content)
@@ -381,7 +379,8 @@ class sitePromoax_01_11:
                 isLogin = re.search(padrao, Texto)
                 if isLogin == None:
                     url_cmp = extrair_caminho_pdf(Texto)
-                    self.baixar_csv(url_cmp)
+                    await self.baixar_csv(url_cmp)
+                    rst = (True, False)
                 else:
                     print("Erro ao realizar o download desse arquivo: 01_11_csv ou sessão expirada!")
                     rst = (False, False)
@@ -1854,7 +1853,7 @@ class sitePromoax_03_11_20:
         
         print(f"Salvo em: {path}")
 
-    def baixar_csv(self, url):
+    async def baixar_csv(self, url):
         try:
             url_csv = f"http://taruma.promaxcloud.com.br{url}"
             response = requests.get(url_csv)
@@ -1957,7 +1956,7 @@ class sitePromoax_03_11_20:
 
                         url_cmp = extrair_caminho_pdf(Texto)
                         await self.baixar_csv(url_cmp)
-                        rst = (False, False)
+                        rst = (True, False)
                 else:
                     print(f"Erro ao realizar o download desse arquivo: {self.relatorio} ou sessão expirada!")
                     rst = (False, False)
@@ -2322,7 +2321,7 @@ class sitePromoax_03_11_40:
         
         print(f"Salvo em: {path}")
 
-    def baixar_csv(self, url):
+    async def baixar_csv(self, url):
         try:
             url_csv = f"http://taruma.promaxcloud.com.br{url}"
             response = requests.get(url_csv)
