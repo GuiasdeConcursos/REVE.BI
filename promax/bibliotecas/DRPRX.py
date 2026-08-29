@@ -2010,7 +2010,7 @@ class sitePromoax_03_11_49_02:
         
         print(f"Salvo em: {path}")
 
-    def baixar_csv(self, url):
+    async def baixar_csv(self, url):
         try:
             url_csv = f"http://taruma.promaxcloud.com.br{url}"
             response = requests.get(url_csv)
@@ -2146,7 +2146,7 @@ class sitePromoax_03_02_37_MPD:
         
         print(f"Salvo em: {path}")
 
-    def baixar_csv(self, url):
+    async def baixar_csv(self, url):
         try:
             url_csv = f"http://taruma.promaxcloud.com.br{url}"
             response = requests.get(url_csv)

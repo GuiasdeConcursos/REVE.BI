@@ -13,7 +13,7 @@ def LoginPromax(unidade: int = 0):
     return sessao
     #------------------------------------------------------
 
-async def NivelServico():
+async def Atendimento_Rating():
     # Juiz deFora
     Unidade = "Juiz de Fora"
     Nome = "Rating"
@@ -370,4 +370,4 @@ async def NivelServico():
 
 if __name__ == "__main__":
     import asyncio
-    asyncio.run(NivelServico())
+    asyncio.run(Atendimento_Rating())
