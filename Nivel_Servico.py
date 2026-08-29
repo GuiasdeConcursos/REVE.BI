@@ -23,7 +23,7 @@ async def NivelServico():
     Ativo = False
     #01.05.07.04.02
     if(Ativo):
-        OP = "01.05.07.04.02_Taruma"
+        OP = "01.05.07.04.02_Taruma_NS"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\ATENDIMENTO\NÍVEL DE SERVIÇO\01.05.07.04.02\Taruma.csv")
 
@@ -49,7 +49,6 @@ async def NivelServico():
         await C_01_05_07_04_02.solicitar_csv()
         await C_01_05_07_04_02.Salvar_em(str(Caminho.absolute()))
 
-        Caminho = Path(r"\\Mm04\z\ATENDIMENTO\NÍVEL DE SERVIÇO\01.05.07.04.02\Taruma.csv")
         wb.sheets[0].range("G4").value = Caminho.stat().st_size
         DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
         wb.sheets[0].range("I4").value = DataCriacao
@@ -67,7 +66,7 @@ async def NivelServico():
     Ativo = False
     #01.11
     if(Ativo):
-        OP = "01.11_Taruma"
+        OP = "01.11_Taruma_NS"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\ATENDIMENTO\NÍVEL DE SERVIÇO\01.11\01.11.csv")
 
@@ -109,7 +108,7 @@ async def NivelServico():
     Ativo = False
     #01.20.01.47
     if(Ativo):
-        OP = "01.20.01.47_Taruma"
+        OP = "01.20.01.47_Taruma_NS"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\ATENDIMENTO\NÍVEL DE SERVIÇO\01.20.01.47\Taruma.csv")
 
@@ -151,7 +150,7 @@ async def NivelServico():
     Ativo = False
     #01.20.01.24
     if(Ativo):
-        OP = "01_20_01_24_Taruma"
+        OP = "01_20_01_24_Taruma_NS"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\ATENDIMENTO\NÍVEL DE SERVIÇO\01.20.01.24\Taruma.csv")
 
@@ -194,7 +193,7 @@ async def NivelServico():
     Ativo = False
     #03.01.47.01
     if(Ativo):
-        OP = "03_01_47_01_Taruma"
+        OP = "03_01_47_01_Taruma_NS"
         Inicio = Datas.datetime.now()
 
         import promax.bibliotecas.nome_bi as nb
@@ -241,7 +240,7 @@ async def NivelServico():
     Ativo = False
     #03.02.37
     if(Ativo):
-        OP = "03_02_37_Taruma"
+        OP = "03_02_37_Taruma_NS"
         Inicio = Datas.datetime.now()
 
         import promax.bibliotecas.nome_bi as nb
@@ -293,7 +292,7 @@ async def NivelServico():
     Ativo = False
     #01.05.07.04.02
     if(Ativo):
-        OP = "01.05.07.04.02_Tarumabq"
+        OP = "01.05.07.04.02_Tarumabq_NS"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\ATENDIMENTO\NÍVEL DE SERVIÇO\01.05.07.04.02\Tarumabq.csv")
 
@@ -337,7 +336,7 @@ async def NivelServico():
     Ativo = False
     #01.11
     if(Ativo):
-        OP = "01.11_Taruma"
+        OP = "01.11_Tarumabq_NS"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\ATENDIMENTO\NÍVEL DE SERVIÇO\01.11\01.11.csv")
 
@@ -379,7 +378,7 @@ async def NivelServico():
     Ativo = False
     #01.20.01.47
     if(Ativo):
-        OP = "01.20.01.47_Taruma"
+        OP = "01.20.01.47_Tarumabq_NS"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\ATENDIMENTO\NÍVEL DE SERVIÇO\01.20.01.47\Tarumabq.csv")
 
@@ -421,7 +420,7 @@ async def NivelServico():
     Ativo = False
     #01.20.01.24
     if(Ativo):
-        OP = "01_20_01_24_Taruma"
+        OP = "01_20_01_24_Tarumabq_NS"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\ATENDIMENTO\NÍVEL DE SERVIÇO\01.20.01.24\Tarumabq.csv")
 
@@ -464,7 +463,7 @@ async def NivelServico():
     Ativo = False
     #03.01.47.01
     if(Ativo):
-        OP = "03_01_47_01_Taruma"
+        OP = "03_01_47_01_Tarumabq_NS"
         Inicio = Datas.datetime.now()
 
         import promax.bibliotecas.nome_bi as nb
@@ -511,7 +510,7 @@ async def NivelServico():
     Ativo = True
     #03.02.37
     if(Ativo):
-        OP = "03_02_37_Taruma"
+        OP = "03_02_37_Tarumabq_NS"
         Inicio = Datas.datetime.now()
 
         import promax.bibliotecas.nome_bi as nb
@@ -549,7 +548,7 @@ async def NivelServico():
         wb.sheets[0].range("D20").value = Termino 
 
         #Status
-        wb.sheets[0].range("E2").value = ""
+        wb.sheets[0].range("E2").value = "Concluído"
 #--------------------------------------------------------
 
 
