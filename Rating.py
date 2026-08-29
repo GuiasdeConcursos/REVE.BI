@@ -20,12 +20,12 @@ async def NivelServico():
     import promax.bibliotecas.DRPRX as rpx
     Processo_Logar_Promax = LoginPromax()
 
-    Ativo = False
+    Ativo = True
     #01.05.07.04.02
     if(Ativo):
         OP = "01.05.07.04.02_Taruma_Rating"
         Inicio = Datas.datetime.now()
-        Caminho = Path(r"\\Mm04\z\ATENDIMENTO\NÍVEL DE SERVIÇO\RATING\Taruma.csv")
+        Caminho = Path(r"\\Mm04\z\ATENDIMENTO\RATING\01.05.07.04.02\Taruma.csv")
 
         wb = xw.apps.active.books.active  
         wb.sheets[1].range("A4").value = Unidade
@@ -59,7 +59,47 @@ async def NivelServico():
         #Status
         wb.sheets[1].range("E2").value = ""
 #--------------------------------------------------------
+# Juiz deFora
+    Unidade = "Juiz de Fora"
+    Nome = "Nível de Serviço"
+    Ativo = False
+    #01.20.01.47
+    if(Ativo):
+        OP = "01.20.01.47_Taruma_Rating"
+        Inicio = Datas.datetime.now()
+        Caminho = Path(r"\\Mm04\z\ATENDIMENTO\RATING\01.20.01.47\Taruma.csv")
 
+        wb = xw.apps.active.books.active  
+        wb.sheets[1].range("A6").value = Unidade
+        wb.sheets[1].range("B6").value = Nome
+        wb.sheets[1].range("C6").value = Inicio
+        wb.sheets[1].range("E6").value = "01_20_01_47"
+        wb.sheets[1].range("F6").value = str(Caminho.absolute())
+        wb.sheets[1].range("H6").value = Caminho.stat().st_size
+        DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
+        wb.sheets[1].range("J6").value = DataCriacao
+
+        #Status
+        wb.sheets[1].range("E2").value = "Movendo arquivo antigo"
+        shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}.csv")
+
+        #------------Início Classe 01_20_01_47
+        #Status
+        wb.sheets[1].range("E2").value = "Baixando arquivo CSV"
+        C_01_20_01_47 = rpx.sitePromoax_01_20_01_47(Processo_Logar_Promax)
+        await C_01_20_01_47.solicitar_csv()
+        await C_01_20_01_47.Salvar_em(str(Caminho.absolute()))
+
+        wb.sheets[1].range("G6").value = Caminho.stat().st_size
+        DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
+        wb.sheets[1].range("I6").value = DataCriacao
+
+        Termino = Datas.datetime.now()
+        wb.sheets[1].range("D6").value = Termino 
+
+        #Status
+        wb.sheets[1].range("E2").value = ""
+#--------------------------------------------------------
  
 
 if __name__ == "__main__":

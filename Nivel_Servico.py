@@ -49,6 +49,7 @@ async def NivelServico():
         await C_01_05_07_04_02.solicitar_csv()
         await C_01_05_07_04_02.Salvar_em(str(Caminho.absolute()))
 
+
         wb.sheets[0].range("G4").value = Caminho.stat().st_size
         DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
         wb.sheets[0].range("I4").value = DataCriacao
