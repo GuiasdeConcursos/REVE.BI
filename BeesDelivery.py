@@ -114,6 +114,8 @@ async def BeesDelivery():
             #Status
             wb.sheets[7].range("E2").value = "Movendo arquivo antigo"
             shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}.csv")
+        except:
+            pass
         finally:
             pass
         #------------Início Classe 01_20_01_47
@@ -160,6 +162,8 @@ async def BeesDelivery():
             #Status
             wb.sheets[7].range("E2").value = "Movendo arquivo antigo"
             shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}.csv")
+        except:
+            pass
         finally:
             pass
         #------------Início Classe 03_11_20
@@ -313,6 +317,8 @@ async def BeesDelivery():
             #Status
             wb.sheets[7].range("E2").value = "Movendo arquivo antigo"
             shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}bq.csv")
+        except:
+            pass
         finally:
             pass
         #------------Início Classe 01_20_01_47
@@ -405,6 +411,8 @@ async def BeesDelivery():
             #Status
             wb.sheets[7].range("E2").value = "Movendo arquivo antigo"
             shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}bq.csv")
+        except:
+            pass
         finally:
             pass
         #------------Início Classe 03_02_24

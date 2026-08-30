@@ -458,6 +458,8 @@ async def Volumes():
             #Status
             wb.sheets[6].range("E2").value = "Movendo arquivo antigo"
             shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}bq.csv")
+        except:
+            pass
         finally:
             pass
         #------------Início Classe 05_10

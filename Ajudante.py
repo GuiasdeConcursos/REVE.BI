@@ -47,6 +47,8 @@ async def Produtividade_Ajudante():
             #Status
             wb.sheets[3].range("E2").value = "Movendo arquivo antigo"
             shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}.csv")
+        except:
+            pass
         finally:
             pass
         #------------Início Classe 03_02_37
@@ -91,6 +93,8 @@ async def Produtividade_Ajudante():
             #Status
             wb.sheets[3].range("E2").value = "Movendo arquivo antigo"
             shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}.csv")
+        except:
+            pass
         finally:
             pass
         #------------Início Classe 01_05_07_04_02
@@ -133,6 +137,8 @@ async def Produtividade_Ajudante():
             #Status
             wb.sheets[3].range("E2").value = "Movendo arquivo antigo"
             shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}.csv")
+        except:
+            pass
         finally:
             pass
         #------------Início Classe 01_20_01_48
@@ -179,6 +185,8 @@ async def Produtividade_Ajudante():
             #Status
             wb.sheets[3].range("E2").value = "Movendo arquivo antigo"
             shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}.csv")
+        except:
+            pass
         finally:
             pass
         #------------Início Classe 03_11_20
@@ -233,6 +241,8 @@ async def Produtividade_Ajudante():
             #Status
             wb.sheets[3].range("E2").value = "Movendo arquivo antigo"
             shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}bq.csv")
+        except:
+            pass
         finally:
             pass
         #------------Início Classe 03_02_37
@@ -277,6 +287,8 @@ async def Produtividade_Ajudante():
             #Status
             wb.sheets[3].range("E2").value = "Movendo arquivo antigo"
             shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}bq.csv")
+        except:
+            pass
         finally:
             pas
         #------------Início Classe 01_20_01_48
@@ -323,6 +335,8 @@ async def Produtividade_Ajudante():
             #Status
             wb.sheets[3].range("E2").value = "Movendo arquivo antigo"
             shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}bq.csv")
+        except:
+            pass
         finally:
             pass
         #------------Início Classe 03_11_20

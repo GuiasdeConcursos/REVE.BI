@@ -113,6 +113,8 @@ async def Produtividade_CBEES():
             #Status
             wb.sheets[4].range("E2").value = "Movendo arquivo antigo"
             shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}.csv")
+        except:
+            pass
         finally:
             pass
         #------------Início Classe 01_11

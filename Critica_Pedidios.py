@@ -45,6 +45,8 @@ async def CriticaPedidos():
             #Status
             wb.sheets[5].range("E2").value = "Movendo arquivo antigo"
             shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}.csv")
+        except:
+            pass
         finally:
             pass
         #------------Início Classe 01_09
@@ -87,6 +89,8 @@ async def CriticaPedidos():
             #Status
             wb.sheets[5].range("E2").value = "Movendo arquivo antigo"
             shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}.csv")
+        except:
+            pass
         finally:
             pass
         #------------Início Classe 01_11
@@ -129,6 +133,8 @@ async def CriticaPedidos():
             #Status
             wb.sheets[5].range("E2").value = "Movendo arquivo antigo"
             shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}.csv")
+        except:
+            pass
         finally:
             pas
         #------------Início Classe 01_12
@@ -172,6 +178,8 @@ async def CriticaPedidos():
             #Status
             wb.sheets[5].range("E2").value = "Movendo arquivo antigo"
             shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}.csv")
+        except:
+            pass
         finally:
             pass
         #------------Início Classe 01_05_07_04_02
