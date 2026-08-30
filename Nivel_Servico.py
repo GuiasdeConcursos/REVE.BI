@@ -12,6 +12,18 @@ def LoginPromax(unidade: int = 0):
 
     return sessao
     #------------------------------------------------------
+async def verificarCache():
+    import promax.bibliotecas.data_prx as dp
+    Arquivo = Path(__file__).parent / "Promax" / "cache" / "C_01_05_07_04_02" / "Taruma.csv"
+    if Arquivo.is_file():
+        DtHJ = dp.Datas().data_hoje()
+        DataCriacao = (Datas.datetime.fromtimestamp(Arquivo.stat().st_birthtime)).strftime("%d/%m/%Y")
+        if DataCriacao == DtHJ:
+            return True
+        else:
+            return False
+    else:
+        return False
 
 async def AtendimentoNivelServico():
     # Juiz deFora
@@ -20,7 +32,7 @@ async def AtendimentoNivelServico():
     import promax.bibliotecas.DRPRX as rpx
     Processo_Logar_Promax = LoginPromax()
 
-    Ativo = False
+    Ativo = True
     #01.05.07.04.02
     if(Ativo):
         OP = "01.05.07.04.02_Taruma_NS"
@@ -46,9 +58,19 @@ async def AtendimentoNivelServico():
         #Status
         wb.sheets[0].range("E2").value = "Baixando arquivo CSV"
         C_01_05_07_04_02 = rpx.sitePromoax_01_05_07_04_02_GERAL(Processo_Logar_Promax)
-        await C_01_05_07_04_02.solicitar_csv()
-        await C_01_05_07_04_02.Salvar_em(str(Caminho.absolute()))
-
+        while True:
+            check_cache = await verificarCache()
+            if(not check_cache):
+                saida = await C_01_05_07_04_02.solicitar_csv()
+                if(saida == "OK"):
+                    await C_01_05_07_04_02.Salvar_em(str(Caminho.absolute()))
+                    await C_01_05_07_04_02.Salvar_em( Path(__file__).parent / "Promax" / "cache" / "C_01_05_07_04_02" / "Taruma.csv")
+                    break
+                else:
+                    await asyncio.sleep(120)
+            else:
+                shutil.copy(str(Path(__file__).parent / "Promax" / "cache" / "C_01_05_07_04_02" / "Taruma.csv"), str(Caminho.absolute()))
+                break
 
         wb.sheets[0].range("G4").value = Caminho.stat().st_size
         DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
@@ -508,7 +530,7 @@ async def AtendimentoNivelServico():
 # Barbacena
     Unidade = "Barbacena"
     Nome = "Nível de Serviço"
-    Ativo = True
+    Ativo = False
     #03.02.37
     if(Ativo):
         OP = "03_02_37_Tarumabq_NS"
