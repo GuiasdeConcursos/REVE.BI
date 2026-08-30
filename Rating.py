@@ -32,10 +32,10 @@ async def Atendimento_Rating():
     import promax.bibliotecas.DRPRX as rpx
     Processo_Logar_Promax = LoginPromax()
 
-    Ativo = False
+    Ativo = True
     #01.05.07.04.02
     if(Ativo):
-        OP = "01.05.07.04.02_Taruma_Rating"
+        OP = "RT_01.05.07.04.02"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\ATENDIMENTO\RATING\01.05.07.04.02\Taruma.csv")
 
@@ -70,8 +70,9 @@ async def Atendimento_Rating():
                     await C_01_05_07_04_02.Salvar_em( Path(__file__).parent / "Promax" / "cache" / "C_01_05_07_04_02" / "Taruma.csv")
                     break
                 else:
-                    await asyncio.sleep(120)
+                    await asyncio.sleep(180)
             else:
+                print("Copia de cache")
                 shutil.copy(str(Path(__file__).parent / "Promax" / "cache" / "C_01_05_07_04_02" / "Taruma.csv"), str(Caminho.absolute()))
                 break
 
@@ -87,11 +88,11 @@ async def Atendimento_Rating():
 #--------------------------------------------------------
 # Juiz deFora
     Unidade = "Juiz de Fora"
-    Nome = "Ratinga"
-    Ativo = False
+    Nome = "Rating"
+    Ativo = True
     #01.20.01.47
     if(Ativo):
-        OP = "01.20.01.47_Taruma_Rating"
+        OP = "RT_01.20.01.47"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\ATENDIMENTO\RATING\01.20.01.47\Taruma.csv")
 
@@ -129,11 +130,11 @@ async def Atendimento_Rating():
  
 # Juiz deFora
     Unidade = "Juiz de Fora"
-    Nome = "Ratinga"
-    Ativo = False
+    Nome = ""
+    Ativo = True
     #01.20.01.48
     if(Ativo):
-        OP = "01.20.01.48_Taruma_Rating"
+        OP = "RT_01.20.01.48"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\ATENDIMENTO\RATING\01.20.01.48\Taruma.csv")
 
@@ -172,10 +173,10 @@ async def Atendimento_Rating():
  # Juiz deFora
     Unidade = "Juiz de Fora"
     Nome = "Rating"
-    Ativo = False
+    Ativo = True
     #03.02.37
     if(Ativo):
-        OP = "03_02_37_Taruma_Rating"
+        OP = "RT_03_02_37"
         Inicio = Datas.datetime.now()
 
         import promax.bibliotecas.nome_bi as nb
@@ -222,10 +223,10 @@ async def Atendimento_Rating():
     import promax.bibliotecas.DRPRX as rpx
     Processo_Logar_Promax = LoginPromax(1)
 
-    Ativo = False
+    Ativo = True
     #01.05.07.04.02
     if(Ativo):
-        OP = "01.05.07.04.02_Taruma_Rating"
+        OP = "RT_BQ_01.05.07.04.02"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\ATENDIMENTO\RATING\01.05.07.04.02\Tarumabq.csv")
 
@@ -260,7 +261,7 @@ async def Atendimento_Rating():
                     await C_01_05_07_04_02.Salvar_em( Path(__file__).parent / "Promax" / "cache" / "C_01_05_07_04_02" / "Tarumabq.csv")
                     break
                 else:
-                    await asyncio.sleep(120)
+                    await asyncio.sleep(180)
             else:
                 shutil.copy(str(Path(__file__).parent / "Promax" / "cache" / "C_01_05_07_04_02" / "Tarumabq.csv"), str(Caminho.absolute()))
                 break
@@ -278,10 +279,10 @@ async def Atendimento_Rating():
 # Barbacena
     Unidade = "Barbacena"
     Nome = "Rating"
-    Ativo = False
+    Ativo = True
     #01.20.01.47
     if(Ativo):
-        OP = "01.20.01.47_Taruma_Rating"
+        OP = "RT_BQ_01.20.01.47"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\ATENDIMENTO\RATING\01.20.01.47\Tarumabq.csv")
 
@@ -320,10 +321,10 @@ async def Atendimento_Rating():
 # Barbacena
     Unidade = "Barbacena"
     Nome = "Rating"
-    Ativo = False
+    Ativo = True
     #01.20.01.48
     if(Ativo):
-        OP = "01.20.01.48_Taruma_Rating"
+        OP = "RT_BQ_01.20.01.48"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\ATENDIMENTO\RATING\01.20.01.48\Tarumabq.csv")
 
@@ -362,10 +363,10 @@ async def Atendimento_Rating():
 # Barbacena
     Unidade = "Barbacena"
     Nome = "Rating"
-    Ativo = False
+    Ativo = True
     #03.02.37
     if(Ativo):
-        OP = "03_02_37_Taruma_Rating"
+        OP = "RT_BQ_03_02_37"
         Inicio = Datas.datetime.now()
 
         import promax.bibliotecas.nome_bi as nb

@@ -23,11 +23,11 @@ async def CriticaPedidos():
 #-------------------------------------------
     # Juiz deFora
     Unidade = "Juiz de Fora"
-    Nome = "CriticaPedidos"
+    Nome = "Crítica de Pedidos"
     Ativo = False
     #01.09
     if(Ativo):
-        OP = "01.09_Critica_Pedidos"
+        OP = "CP_01.09"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\CRITICA PEDIDOS\01.09\01.09.csv")
 
@@ -63,11 +63,11 @@ async def CriticaPedidos():
 #--------------------------------------------------------
     # Juiz deFora
     Unidade = "Juiz de Fora"
-    Nome = "CriticaPedidos"
+    Nome = "Crítica de Pedidos"
     Ativo = False
     #01.11
     if(Ativo):
-        OP = "01.11_Taruma_Ajudante"
+        OP = "CP_01.11"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\CRITICA PEDIDOS\01.11\01.11.csv")
 
@@ -103,11 +103,11 @@ async def CriticaPedidos():
 #--------------------------------------------------------
 # Juiz deFora
     Unidade = "Juiz de Fora"
-    Nome = "CriticaPedidos"
+    Nome = "Crítica de Pedidos"
     Ativo = False
     #01.12
     if(Ativo):
-        OP = "01.12_Taruma_Ajudante"
+        OP = "CP_01.12"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\CRITICA PEDIDOS\01.12\01.12.csv")
 
@@ -144,11 +144,11 @@ async def CriticaPedidos():
 
     # Juiz deFora
     Unidade = "Juiz de Fora"
-    Nome = "CriticaPedidos"
+    Nome = "Crítica de Pedidos"
     Ativo = False
     #01.05.07.04.02
     if(Ativo):
-        OP = "01.05.07.04.02_CPedidos"
+        OP = "CP_01.05.07.04.02"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\CRITICA PEDIDOS\01.05.07.04.02\Taruma.csv")
 
@@ -185,11 +185,11 @@ async def CriticaPedidos():
 #-------------------------------------------
 # Juiz deFora
     Unidade = "Juiz de Fora"
-    Nome = "CriticaPedidos"
+    Nome = "Crítica de Pedidos"
     Ativo = False
     #02.05.02
     if(Ativo):
-        OP = "02.05.02_CPedidos"
+        OP = "CP_02.05.02"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\CRITICA PEDIDOS\02.05.02\Taruma.csv")
 
@@ -226,11 +226,11 @@ async def CriticaPedidos():
 #-------------------------------------------
 # Juiz deFora
     Unidade = "Juiz de Fora"
-    Nome = "CriticaPedidos"
+    Nome = "Crítica de Pedidos"
     Ativo = False
     #03.01.11
     if(Ativo):
-        OP = "03.01.11_CPedidos"
+        OP = "CP_03.01.11"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\CRITICA PEDIDOS\03.01.11\Taruma.csv")
 
@@ -267,11 +267,11 @@ async def CriticaPedidos():
 #-------------------------------------------
 # Juiz deFora
     Unidade = "Juiz de Fora"
-    Nome = "CriticaPedidos"
+    Nome = "Crítica de Pedidos"
     Ativo = False
     #03.01.36.04
     if(Ativo):
-        OP = "03.01.36.04_CPedidos"
+        OP = "CP_03.01.36.04"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\CRITICA PEDIDOS\03.01.36.04\Taruma.csv")
 
@@ -308,11 +308,11 @@ async def CriticaPedidos():
 #-------------------------------------------
 # Juiz deFora
     Unidade = "Juiz de Fora"
-    Nome = "CriticaPedidos"
+    Nome = "Crítica de Pedidos"
     Ativo = False
     #03.02.24
     if(Ativo):
-        OP = "03.02.24_CPedidos"
+        OP = "CP_03.02.24"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\CRITICA PEDIDOS\03.02.24\Taruma.csv")
 
@@ -349,11 +349,11 @@ async def CriticaPedidos():
 #-------------------------------------------
 # Juiz deFora
     Unidade = "Juiz de Fora"
-    Nome = "CriticaPedidos"
+    Nome = "Crítica de Pedidos"
     Ativo = True
     #12.06.01
     if(Ativo):
-        OP = "12.06.01_CPedidos"
+        OP = "CP_12.06.01"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\CRITICA PEDIDOS\12.06.01\Taruma.csv")
 
@@ -391,20 +391,20 @@ async def CriticaPedidos():
 
 
 #---------------BARBACENA-----------------------------
-# Juiz deFora
+# Barbacena
     Unidade = "Juiz de Fora"
-    Nome = "CriticaBEES"
+    Nome = "Crítica de Pedidos"
     import promax.bibliotecas.DRPRX as rpx
     Processo_Logar_Promax = LoginPromax(1)
 
 #-------------------------------------------
-# Juiz deFora
+# Barbacena
     Unidade = "Juiz de Fora"
-    Nome = "CriticaPedidos"
+    Nome = "Crítica de Pedidos"
     Ativo = False
     #01.05.07.04.02
     if(Ativo):
-        OP = "01.05.07.04.02_CPedidos"
+        OP = "CP_BQ_01.05.07.04.02"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\CRITICA PEDIDOS\01.05.07.04.02\Tarumabq.csv")
 
@@ -439,13 +439,13 @@ async def CriticaPedidos():
         #Status
         wb.sheets[5].range("E2").value = ""
 #-------------------------------------------
-# Juiz deFora
+# Barbacena
     Unidade = "Juiz de Fora"
-    Nome = "CriticaPedidos"
+    Nome = "Crítica de Pedidos"
     Ativo = False
     #02.05.02
     if(Ativo):
-        OP = "02.05.02_CPedidos"
+        OP = "CP_BQ_02.05.02"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\CRITICA PEDIDOS\02.05.02\Tarumabq.csv")
 
@@ -480,13 +480,13 @@ async def CriticaPedidos():
         #Status
         wb.sheets[5].range("E2").value = ""
 #-------------------------------------------
-# Juiz deFora
+# Barbacena
     Unidade = "Juiz de Fora"
-    Nome = "CriticaPedidos"
+    Nome = "Crítica de Pedidos"
     Ativo = False
     #03.01.11
     if(Ativo):
-        OP = "03.01.11_CPedidos"
+        OP = "CP_BQ_03.01.11"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\CRITICA PEDIDOS\03.01.11\Tarumabq.csv")
 
@@ -521,13 +521,13 @@ async def CriticaPedidos():
         #Status
         wb.sheets[5].range("E2").value = ""
 #-------------------------------------------
-# Juiz deFora
+# Barbacena
     Unidade = "Juiz de Fora"
-    Nome = "CriticaPedidos"
+    Nome = "Crítica de Pedidos"
     Ativo = False
     #03.01.36.04
     if(Ativo):
-        OP = "03.01.36.04_CPedidos"
+        OP = "CP_BQ_03.01.36.04"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\CRITICA PEDIDOS\03.01.36.04\Tarumabq.csv")
 
@@ -562,13 +562,13 @@ async def CriticaPedidos():
         #Status
         wb.sheets[5].range("E2").value = ""
 #-------------------------------------------
-# Juiz deFora
+# Barbacena
     Unidade = "Juiz de Fora"
-    Nome = "CriticaPedidos"
+    Nome = "Crítica de Pedidos"
     Ativo = False
     #03.02.24
     if(Ativo):
-        OP = "03.02.24_CPedidos"
+        OP = "CP_BQ_03.02.24"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\CRITICA PEDIDOS\03.02.24\Tarumabq.csv")
 
@@ -603,13 +603,13 @@ async def CriticaPedidos():
         #Status
         wb.sheets[5].range("E2").value = ""
 #-------------------------------------------
-# Juiz deFora
+# Barbacena
     Unidade = "Juiz de Fora"
-    Nome = "CriticaPedidos"
+    Nome = "Crítica de Pedidos"
     Ativo = True
     #12.06.01
     if(Ativo):
-        OP = "12.06.01_CPedidos"
+        OP = "CP_BQ_12.06.01"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\CRITICA PEDIDOS\12.06.01\Tarumabq.csv")
 

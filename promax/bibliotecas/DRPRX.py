@@ -896,7 +896,7 @@ class sitePromoax_03_02_37_NS:
 
                         url_cmp = extrair_caminho_pdf(Texto)
                         await self.baixar_csv(url_cmp)
-                        rst = (False, False)
+                        rst = (True, False)
                 else:
                     print(f"Erro ao realizar o download desse arquivo: {self.relatorio} ou sessão expirada!")
                     rst = (False, False)
@@ -1085,7 +1085,7 @@ class sitePromoax_03_02_37_RATING:
 
                         url_cmp = extrair_caminho_pdf(Texto)
                         await self.baixar_csv(url_cmp)
-                        rst = (False, False)
+                        rst = (True, False)
                 else:
                     print(f"Erro ao realizar o download desse arquivo: {self.relatorio} ou sessão expirada!")
                     rst = (False, False)
@@ -1270,7 +1270,7 @@ class sitePromoax_03_02_37_MPD:
 
                         url_cmp = extrair_caminho_pdf(Texto)
                         await self.baixar_csv(url_cmp)
-                        rst = (False, False)
+                        rst = (True, False)
                 else:
                     print(f"Erro ao realizar o download desse arquivo: {self.relatorio} ou sessão expirada!")
                     rst = (False, False)
@@ -1462,7 +1462,7 @@ class sitePromoax_03_02_37_AJUD:
 
                         url_cmp = extrair_caminho_pdf(Texto)
                         await self.baixar_csv(url_cmp)
-                        rst = (False, False)
+                        rst = (True, False)
                 else:
                     print(f"Erro ao realizar o download desse arquivo: {self.relatorio} ou sessão expirada!")
                     rst = (False, False)
@@ -1655,7 +1655,7 @@ class sitePromoax_03_02_37_VOLUME:
 
                         url_cmp = extrair_caminho_pdf(Texto)
                         await self.baixar_csv(url_cmp)
-                        rst = (False, False)
+                        rst = (True, False)
                 else:
                     print(f"Erro ao realizar o download desse arquivo: {self.relatorio} ou sessão expirada!")
                     rst = (False, False)
@@ -1708,7 +1708,7 @@ class sitePromoax_01_20_01_47:
         
         print(f"Salvo em: {path}")
 
-    def baixar_csv(self, url):
+    async def baixar_csv(self, url):
         try:
             url_csv = f"http://taruma.promaxcloud.com.br{url}"
             response = requests.get(url_csv)
@@ -1800,7 +1800,7 @@ class sitePromoax_01_20_01_47:
 
                         url_cmp = extrair_caminho_pdf(Texto)
                         await self.baixar_csv(url_cmp)
-                        rst = (False, False)
+                        rst = (True, False)
                 else:
                     print(f"Erro ao realizar o download desse arquivo: {self.relatorio} ou sessão expirada!")
                     rst = (False, False)
@@ -2268,7 +2268,7 @@ class sitePromoax_03_02_37_MPD:
 
                         url_cmp = extrair_caminho_pdf(Texto)
                         await self.baixar_csv(url_cmp)
-                        rst = (False, False)
+                        rst = (True, False)
                 else:
                     print(f"Erro ao realizar o download desse arquivo: {self.relatorio} ou sessão expirada!")
                     rst = (False, False)
@@ -2424,7 +2424,7 @@ class sitePromoax_03_11_40:
 
                         url_cmp = extrair_caminho_pdf(Texto)
                         await self.baixar_csv(url_cmp)
-                        rst = (False, False)
+                        rst = (True, False)
                 else:
                     print(f"Erro ao realizar o download desse arquivo: {self.relatorio} ou sessão expirada!")
                     rst = (False, False)
@@ -2478,7 +2478,7 @@ class sitePromoax_01_20_01_48:
         
         print(f"Salvo em: {path}")
 
-    def baixar_csv(self, url):
+    async def baixar_csv(self, url):
         try:
             url_csv = f"http://taruma.promaxcloud.com.br{url}"
             response = requests.get(url_csv)
@@ -2568,7 +2568,7 @@ class sitePromoax_01_20_01_48:
 
                         url_cmp = extrair_caminho_pdf(Texto)
                         await self.baixar_csv(url_cmp)
-                        rst = (False, False)
+                        rst = (True, False)
                 else:
                     print(f"Erro ao realizar o download desse arquivo: {self.relatorio} ou sessão expirada!")
                     rst = (False, False)
@@ -2978,7 +2978,7 @@ class sitePromoax_02_05_02:
 
                         url_cmp = extrair_caminho_pdf(Texto)
                         await self.baixar_csv(url_cmp)
-                        rst = (False, False)
+                        rst = (True, False)
                 else:
                     print(f"Erro ao realizar o download desse arquivo: {self.relatorio} ou sessão expirada!")
                     rst = (False, False)

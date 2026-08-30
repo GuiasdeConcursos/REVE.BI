@@ -32,7 +32,7 @@ async def AtendimentoNivelServico():
     import promax.bibliotecas.DRPRX as rpx
     Processo_Logar_Promax = LoginPromax()
 
-    Ativo = False
+    Ativo = True
     #01.05.07.04.02
     if(Ativo):
         OP = "01.05.07.04.02_Taruma_NS"
@@ -65,12 +65,12 @@ async def AtendimentoNivelServico():
             check_cache = await verificarCache( Path(__file__).parent / "Promax" / "cache" / "C_01_05_07_04_02" / "Taruma.csv")
             if(not check_cache):
                 saida = await C_01_05_07_04_02.solicitar_csv()
-                if(saida[0] == True):
+                if(saida):
                     await C_01_05_07_04_02.Salvar_em(str(Caminho.absolute()))
                     await C_01_05_07_04_02.Salvar_em( Path(__file__).parent / "Promax" / "cache" / "C_01_05_07_04_02" / "Taruma.csv")
                     break
                 else:
-                    await asyncio.sleep(120)
+                    await asyncio.sleep(180)
             else:
                 shutil.copy(str(Path(__file__).parent / "Promax" / "cache" / "C_01_05_07_04_02" / "Taruma.csv"), str(Caminho.absolute()))
                 break
@@ -89,10 +89,10 @@ async def AtendimentoNivelServico():
     # Juiz deFora
     Unidade = "Juiz de Fora"
     Nome = "Nível de Serviço"
-    Ativo = False
+    Ativo = True
     #01.11
     if(Ativo):
-        OP = "01.11_Taruma_NS"
+        OP = "NS_01.11"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\ATENDIMENTO\NÍVEL DE SERVIÇO\01.11\01.11.csv")
 
@@ -131,10 +131,10 @@ async def AtendimentoNivelServico():
  # Juiz deFora
     Unidade = "Juiz de Fora"
     Nome = "Nível de Serviço"
-    Ativo = False
+    Ativo = True
     #01.20.01.47
     if(Ativo):
-        OP = "01.20.01.47_Taruma_NS"
+        OP = "NS_01.20.01.47"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\ATENDIMENTO\NÍVEL DE SERVIÇO\01.20.01.47\Taruma.csv")
 
@@ -173,10 +173,10 @@ async def AtendimentoNivelServico():
 # Juiz deFora
     Unidade = "Juiz de Fora"
     Nome = "Nível de Serviço"
-    Ativo = False
+    Ativo = True
     #01.20.01.24
     if(Ativo):
-        OP = "01_20_01_24_Taruma_NS"
+        OP = "NS_01_20_01_24"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\ATENDIMENTO\NÍVEL DE SERVIÇO\01.20.01.24\Taruma.csv")
 
@@ -216,10 +216,10 @@ async def AtendimentoNivelServico():
 # Juiz deFora
     Unidade = "Juiz de Fora"
     Nome = "Nível de Serviço"
-    Ativo = False
+    Ativo = True
     #03.01.47.01
     if(Ativo):
-        OP = "03_01_47_01_Taruma_NS"
+        OP = "NS_03_01_47_01"
         Inicio = Datas.datetime.now()
 
         import promax.bibliotecas.nome_bi as nb
@@ -263,10 +263,10 @@ async def AtendimentoNivelServico():
 # Juiz deFora
     Unidade = "Juiz de Fora"
     Nome = "Nível de Serviço"
-    Ativo = False
+    Ativo = True
     #03.02.37
     if(Ativo):
-        OP = "03_02_37_Taruma_NS"
+        OP = "NS_03_02_37"
         Inicio = Datas.datetime.now()
 
         import promax.bibliotecas.nome_bi as nb
@@ -318,7 +318,7 @@ async def AtendimentoNivelServico():
     Ativo = True
     #01.05.07.04.02
     if(Ativo):
-        OP = "01.05.07.04.02_Tarumabq_NS"
+        OP = "NS_BQ_01.05.07.04.02"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\ATENDIMENTO\NÍVEL DE SERVIÇO\01.05.07.04.02\Tarumabq.csv")
 
@@ -353,7 +353,7 @@ async def AtendimentoNivelServico():
                     await C_01_05_07_04_02.Salvar_em( Path(__file__).parent / "Promax" / "cache" / "C_01_05_07_04_02" / "Tarumabq.csv")
                     break
                 else:
-                    await asyncio.sleep(120)
+                    await asyncio.sleep(180)
             else:
                 shutil.copy(str(Path(__file__).parent / "Promax" / "cache" / "C_01_05_07_04_02" / "Tarumabq.csv"), str(Caminho.absolute()))
                 break
@@ -372,10 +372,10 @@ async def AtendimentoNivelServico():
     # Barbacena - nunca roda
     Unidade = "Barbacena"
     Nome = "Nível de Serviço"
-    Ativo = False
+    Ativo = True
     #01.11
     if(Ativo):
-        OP = "01.11_Tarumabq_NS"
+        OP = "NS_BQ_01.11"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\ATENDIMENTO\NÍVEL DE SERVIÇO\01.11\01.11.csv")
 
@@ -414,10 +414,10 @@ async def AtendimentoNivelServico():
  # Barbacena
     Unidade = "Barbacena"
     Nome = "Nível de Serviço"
-    Ativo = False
+    Ativo = True
     #01.20.01.47
     if(Ativo):
-        OP = "01.20.01.47_Tarumabq_NS"
+        OP = "NS_BQ_01.20.01.47"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\ATENDIMENTO\NÍVEL DE SERVIÇO\01.20.01.47\Tarumabq.csv")
 
@@ -456,10 +456,10 @@ async def AtendimentoNivelServico():
 # Barbacena
     Unidade = "Barbacena"
     Nome = "Nível de Serviço"
-    Ativo = False
+    Ativo = True
     #01.20.01.24
     if(Ativo):
-        OP = "01_20_01_24_Tarumabq_NS"
+        OP = "NS_BQ_01_20_01_24"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\ATENDIMENTO\NÍVEL DE SERVIÇO\01.20.01.24\Tarumabq.csv")
 
@@ -499,10 +499,10 @@ async def AtendimentoNivelServico():
 # Barbacena
     Unidade = "Barbacena"
     Nome = "Nível de Serviço"
-    Ativo = False
+    Ativo = True
     #03.01.47.01
     if(Ativo):
-        OP = "03_01_47_01_Tarumabq_NS"
+        OP = "NS_BQ_03_01_47_01"
         Inicio = Datas.datetime.now()
 
         import promax.bibliotecas.nome_bi as nb
@@ -546,10 +546,10 @@ async def AtendimentoNivelServico():
 # Barbacena
     Unidade = "Barbacena"
     Nome = "Nível de Serviço"
-    Ativo = False
+    Ativo = True
     #03.02.37
     if(Ativo):
-        OP = "03_02_37_Tarumabq_NS"
+        OP = "NS_BQ_03_02_37"
         Inicio = Datas.datetime.now()
 
         import promax.bibliotecas.nome_bi as nb

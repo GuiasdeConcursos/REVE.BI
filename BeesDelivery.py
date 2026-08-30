@@ -35,11 +35,11 @@ async def BeesDelivery():
 #-------------------------------------------
     # Juiz deFora
     Unidade = "Juiz de Fora"
-    Nome = "BeesDelivery"
+    Nome = "Bees Delivery"
     Ativo = True
     #01.05.07.04.02
     if(Ativo):
-        OP = "01.05.07.04.02_BeesDelivery"
+        OP = "BD_01.05.07.04.02"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\ATENDIMENTO\BEES DELIVERY\01.05.07.04.02\Taruma.csv")
 
@@ -74,7 +74,7 @@ async def BeesDelivery():
                     await C_01_05_07_04_02.Salvar_em( Path(__file__).parent / "Promax" / "cache" / "C_01_05_07_04_02" / "Taruma.csv")
                     break
                 else:
-                    await asyncio.sleep(120)
+                    await asyncio.sleep(180)
             else:
                 shutil.copy(str(Path(__file__).parent / "Promax" / "cache" / "C_01_05_07_04_02" / "Taruma.csv"), str(Caminho.absolute()))
                 break
@@ -91,11 +91,11 @@ async def BeesDelivery():
 #-------------------------------------------
 # Juiz deFora
     Unidade = "Juiz de Fora"
-    Nome = "beesDelivery"
+    Nome = "bees Delivery"
     Ativo = False
     #01.20.01.47
     if(Ativo):
-        OP = "01.20.01.47_Taruma_beesDelivery"
+        OP = "BD_01.20.01.47"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\ATENDIMENTO\BEES DELIVERY\01.20.01.47\Taruma.csv")
 
@@ -132,11 +132,11 @@ async def BeesDelivery():
 #--------------------------------------------------------
 # Juiz deFora
     Unidade = "Juiz de Fora"
-    Nome = "BeesDelivery"
+    Nome = "Bees Delivery"
     Ativo = False
     #03.11.20
     if(Ativo):
-        OP = "03.11.20_Taruma_BeesDelivery"
+        OP = "BD_03.11.20"
         Inicio = Datas.datetime.now()
         import promax.bibliotecas.nome_bi as nb
         CName = nb.GeradorNomeArquivo(Processo_Logar_Promax.getCodUnidade())
@@ -176,11 +176,11 @@ async def BeesDelivery():
 #--------------------------------------------------------
 # Juiz deFora
     Unidade = "Juiz de Fora"
-    Nome = "BeesDelivery"
+    Nome = "Bees Delivery"
     Ativo = False
     #03.02.24
     if(Ativo):
-        OP = "03.02.24_Taruma_BeesDelivery"
+        OP = "BD_03.02.24"
         Inicio = Datas.datetime.now()
         import promax.bibliotecas.nome_bi as nb
         CName = nb.GeradorNomeArquivo(Processo_Logar_Promax.getCodUnidade())
@@ -228,11 +228,11 @@ async def BeesDelivery():
 
 # BARBACENA
     Unidade = "Barbacena"
-    Nome = "BeesDelivery"
+    Nome = "Bees Delivery"
     Ativo = True
     #01.05.07.04.02
     if(Ativo):
-        OP = "01.05.07.04.02_BeesDelivery"
+        OP = "BD_BQ_01.05.07.04.02"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\ATENDIMENTO\BEES DELIVERY\01.05.07.04.02\Tarumabq.csv")
 
@@ -267,7 +267,7 @@ async def BeesDelivery():
                     await C_01_05_07_04_02.Salvar_em( Path(__file__).parent / "Promax" / "cache" / "C_01_05_07_04_02" / "Tarumabq.csv")
                     break
                 else:
-                    await asyncio.sleep(120)
+                    await asyncio.sleep(180)
             else:
                 shutil.copy(str(Path(__file__).parent / "Promax" / "cache" / "C_01_05_07_04_02" / "Tarumabq.csv"), str(Caminho.absolute()))
                 break
@@ -285,11 +285,11 @@ async def BeesDelivery():
 # BARBACENA
     Unidade = "Barbacena"
     Unidade = "Juiz de Fora"
-    Nome = "beesDelivery"
+    Nome = "bees Delivery"
     Ativo = False
     #01.20.01.47
     if(Ativo):
-        OP = "01.20.01.47_Taruma_beesDelivery"
+        OP = "BD_BQ_01.20.01.47"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\ATENDIMENTO\BEES DELIVERY\01.20.01.47\Tarumabq.csv")
 
@@ -326,11 +326,11 @@ async def BeesDelivery():
 #--------------------------------------------------------
 # BARBACENA
     Unidade = "Barbacena"
-    Nome = "BeesDelivery"
+    Nome = "Bees Delivery"
     Ativo = False
     #03.11.20
     if(Ativo):
-        OP = "03.11.20_Taruma_BeesDelivery"
+        OP = "BD_BQ_03.11.20"
         Inicio = Datas.datetime.now()
         import promax.bibliotecas.nome_bi as nb
         CName = nb.GeradorNomeArquivo(Processo_Logar_Promax.getCodUnidade())
@@ -370,11 +370,11 @@ async def BeesDelivery():
 #--------------------------------------------------------
 # BARBACENA
     Unidade = "Barbacena"
-    Nome = "BeesDelivery"
+    Nome = "Bees Delivery"
     Ativo = False
     #03.02.24
     if(Ativo):
-        OP = "03.02.24_Taruma_BeesDelivery"
+        OP = "BD_BQ_03.02.24"
         Inicio = Datas.datetime.now()
         import promax.bibliotecas.nome_bi as nb
         CName = nb.GeradorNomeArquivo(Processo_Logar_Promax.getCodUnidade())

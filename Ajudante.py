@@ -26,7 +26,7 @@ async def Produtividade_Ajudante():
     Ativo = False
     #03.02.37
     if(Ativo):
-        OP = "03.02.37_Taruma_Ajudante"
+        OP = "AJ_03.02.37"
         Inicio = Datas.datetime.now()
         import promax.bibliotecas.nome_bi as nb
         CName = nb.GeradorNomeArquivo(Processo_Logar_Promax.getCodUnidade())
@@ -71,7 +71,7 @@ async def Produtividade_Ajudante():
     Ativo = False
     #01.11
     if(Ativo):
-        OP = "01.11_Taruma_Ajudante"
+        OP = "AJ_01.11"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\PRODUTIVIDADE\ID AJUDANTE\01.11\01.11.csv")
 
@@ -111,7 +111,7 @@ async def Produtividade_Ajudante():
     Ativo = False
     #01.20.01.48
     if(Ativo):
-        OP = "01.20.01.48_Taruma_Ajudante"
+        OP = "AJ_01.20.01.48"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\PRODUTIVIDADE\ID AJUDANTE\01.20.01.48\Taruma.csv")
 
@@ -152,7 +152,7 @@ async def Produtividade_Ajudante():
     Ativo = True
     #03.11.20
     if(Ativo):
-        OP = "03.11.20_Taruma_Ajudante"
+        OP = "AJ_03.11.20"
         Inicio = Datas.datetime.now()
         import promax.bibliotecas.nome_bi as nb
         CName = nb.GeradorNomeArquivo(Processo_Logar_Promax.getCodUnidade())
@@ -204,7 +204,7 @@ async def Produtividade_Ajudante():
     Ativo = False
     #03.02.37
     if(Ativo):
-        OP = "03.02.37_Taruma_Ajudante"
+        OP = "AJ_BQ_03.02.37"
         Inicio = Datas.datetime.now()
         import promax.bibliotecas.nome_bi as nb
         CName = nb.GeradorNomeArquivo(Processo_Logar_Promax.getCodUnidade())
@@ -249,7 +249,7 @@ async def Produtividade_Ajudante():
     Ativo = False
     #01.20.01.48
     if(Ativo):
-        OP = "01.20.01.48_Taruma_Ajudante"
+        OP = "AJ_BQ_01.20.01.48"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\PRODUTIVIDADE\ID AJUDANTE\01.20.01.48\Tarumabq.csv")
 
@@ -290,7 +290,7 @@ async def Produtividade_Ajudante():
     Ativo = True
     #03.11.20
     if(Ativo):
-        OP = "03.11.20_Taruma_Ajudante"
+        OP = "AJ_BQ_03.11.20"
         Inicio = Datas.datetime.now()
         import promax.bibliotecas.nome_bi as nb
         CName = nb.GeradorNomeArquivo(Processo_Logar_Promax.getCodUnidade())

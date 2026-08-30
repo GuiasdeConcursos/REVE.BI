@@ -28,7 +28,7 @@ async def verificarCache(Arquivo: Path):
 async def Produtividade_CBEES():
 # Juiz deFora
     Unidade = "Juiz de Fora"
-    Nome = "CriticaBEES"
+    Nome = "CBEES"
     import promax.bibliotecas.DRPRX as rpx
     Processo_Logar_Promax = LoginPromax()
 
@@ -38,7 +38,7 @@ async def Produtividade_CBEES():
     Ativo = False
     #01.05.07.04.02
     if(Ativo):
-        OP = "01.05.07.04.02_CBEES"
+        OP = "BE_01.05.07.04.02"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\COMERCIAL\BEES\01.05.07.04.02\Taruma.csv")
 
@@ -73,7 +73,7 @@ async def Produtividade_CBEES():
                     await C_01_05_07_04_02.Salvar_em( Path(__file__).parent / "Promax" / "cache" / "C_01_05_07_04_02" / "Taruma.csv")
                     break
                 else:
-                    await asyncio.sleep(120)
+                    await asyncio.sleep(180)
             else:
                 shutil.copy(str(Path(__file__).parent / "Promax" / "cache" / "C_01_05_07_04_02" / "Taruma.csv"), str(Caminho.absolute()))
                 break
@@ -94,7 +94,7 @@ async def Produtividade_CBEES():
     Ativo = True
     #01.11
     if(Ativo):
-        OP = "01.11_Taruma_Ajudante"
+        OP = "BE_01.11"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\COMERCIAL\BEES\01.11\01.11.csv")
 
@@ -142,7 +142,7 @@ async def Produtividade_CBEES():
     Ativo = False
     #01.05.07.04.02
     if(Ativo):
-        OP = "01.05.07.04.02_CBEES"
+        OP = "BE_01.05.07.04.02"
         Inicio = Datas.datetime.now()
         Caminho = Path(r"\\Mm04\z\COMERCIAL\BEES\01.05.07.04.02\Tarumabq.csv")
 
@@ -177,7 +177,7 @@ async def Produtividade_CBEES():
                     await C_01_05_07_04_02.Salvar_em( Path(__file__).parent / "Promax" / "cache" / "C_01_05_07_04_02" / "Tarumabq.csv")
                     break
                 else:
-                    await asyncio.sleep(120)
+                    await asyncio.sleep(180)
             else:
                 shutil.copy(str(Path(__file__).parent / "Promax" / "cache" / "C_01_05_07_04_02" / "Tarumabq.csv"), str(Caminho.absolute()))
                 break

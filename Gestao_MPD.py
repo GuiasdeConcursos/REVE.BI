@@ -16,17 +16,17 @@ def LoginPromax(unidade: int = 0):
 async def Produtividade_Gestao_MPD():
 # Juiz deFora
     Unidade = "Juiz de Fora"
-    Nome = "Nível de Serviço"
+    Nome = "Produtividade"
     import promax.bibliotecas.DRPRX as rpx
     Processo_Logar_Promax = LoginPromax()
 
 # Juiz deFora
     Unidade = "Juiz de Fora"
     Nome = "Produtividade Gestão MPD"
-    Ativo = False
+    Ativo = True
     #01.20.01.47
     if(Ativo):
-        OP = "01.20.01.47_Taruma_GMPD"
+        OP = "GMPD_01.20.01.47"
         Inicio = Datas.datetime.now()
         import promax.bibliotecas.nome_bi as nb
         CName = nb.GeradorNomeArquivo(Processo_Logar_Promax.getCodUnidade())
@@ -67,10 +67,10 @@ async def Produtividade_Gestao_MPD():
 # Juiz deFora
     Unidade = "Juiz de Fora"
     Nome = "Produtividade Gestão MPD"
-    Ativo = False
+    Ativo = True
     #03.11.20
     if(Ativo):
-        OP = "03.11.20_Taruma_GMPD"
+        OP = "GMPD_03.11.20"
         Inicio = Datas.datetime.now()
         import promax.bibliotecas.nome_bi as nb
         CName = nb.GeradorNomeArquivo(Processo_Logar_Promax.getCodUnidade())
@@ -111,10 +111,10 @@ async def Produtividade_Gestao_MPD():
 # Juiz deFora
     Unidade = "Juiz de Fora"
     Nome = "Produtividade Gestão MPD"
-    Ativo = False
+    Ativo = True
     #03.11.49.02
     if(Ativo):
-        OP = "03.11.49.02_Taruma_GMPD"
+        OP = "GMPD_03.11.49.02"
         Inicio = Datas.datetime.now()
         import promax.bibliotecas.nome_bi as nb
         CName = nb.GeradorNomeArquivo(Processo_Logar_Promax.getCodUnidade())
@@ -155,10 +155,10 @@ async def Produtividade_Gestao_MPD():
 # Juiz deFora
     Unidade = "Juiz de Fora"
     Nome = "Produtividade Gestão MPD"
-    Ativo = False
+    Ativo = True
     #03.02.37
     if(Ativo):
-        OP = "03.02.37_Taruma_GMPD"
+        OP = "GMPD_03.02.37"
         Inicio = Datas.datetime.now()
         import promax.bibliotecas.nome_bi as nb
         CName = nb.GeradorNomeArquivo(Processo_Logar_Promax.getCodUnidade())
@@ -199,10 +199,10 @@ async def Produtividade_Gestao_MPD():
 # Juiz deFora
     Unidade = "Juiz de Fora"
     Nome = "Produtividade Gestão MPD"
-    Ativo = False
+    Ativo = True
     #03.11.40
     if(Ativo):
-        OP = "03.11.40_Taruma_GMPD"
+        OP = "GMPD_03.11.40"
         Inicio = Datas.datetime.now()
         import promax.bibliotecas.nome_bi as nb
         CName = nb.GeradorNomeArquivo(Processo_Logar_Promax.getCodUnidade())
@@ -244,17 +244,17 @@ async def Produtividade_Gestao_MPD():
 #--------------------------------BARBACENA-------------------------------------------------
 # Barbacena
     Unidade = "Barbacena"
-    Nome = "Nível de Serviço"
+    Nome = "Produtividade Gestão MPD"
     import promax.bibliotecas.DRPRX as rpx
     Processo_Logar_Promax = LoginPromax(1)
 
 # Barbacena
     Unidade = "Barbacena"
     Nome = "Produtividade Gestão MPD"
-    Ativo = False
+    Ativo = True
     #01.20.01.47
     if(Ativo):
-        OP = "01.20.01.47_Taruma_GMPD"
+        OP = "GMPD_BQ_1.20.01.47"
         Inicio = Datas.datetime.now()
         import promax.bibliotecas.nome_bi as nb
         CName = nb.GeradorNomeArquivo(Processo_Logar_Promax.getCodUnidade())
@@ -295,10 +295,10 @@ async def Produtividade_Gestao_MPD():
 # Barbacena
     Unidade = "Barbacena"
     Nome = "Produtividade Gestão MPD"
-    Ativo = False
+    Ativo = True
     #03.11.20
     if(Ativo):
-        OP = "03.11.20_Taruma_GMPD"
+        OP = "GMPD_BQ_03.11.20"
         Inicio = Datas.datetime.now()
         import promax.bibliotecas.nome_bi as nb
         CName = nb.GeradorNomeArquivo(Processo_Logar_Promax.getCodUnidade())
@@ -339,10 +339,10 @@ async def Produtividade_Gestao_MPD():
 # Barbacena
     Unidade = "Barbacena"
     Nome = "Produtividade Gestão MPD"
-    Ativo = False
+    Ativo = True
     #03.11.49.02
     if(Ativo):
-        OP = "03.11.49.02_Taruma_GMPD"
+        OP = "GMPD_BQ_03.11.49.02"
         Inicio = Datas.datetime.now()
         import promax.bibliotecas.nome_bi as nb
         CName = nb.GeradorNomeArquivo(Processo_Logar_Promax.getCodUnidade())
@@ -383,10 +383,10 @@ async def Produtividade_Gestao_MPD():
 # Barbacena
     Unidade = "Barbacena"
     Nome = "Produtividade Gestão MPD"
-    Ativo = False
+    Ativo = True
     #03.02.37
     if(Ativo):
-        OP = "03.02.37_Taruma_GMPD"
+        OP = "GMPD_BQ_03.02.37"
         Inicio = Datas.datetime.now()
         import promax.bibliotecas.nome_bi as nb
         CName = nb.GeradorNomeArquivo(Processo_Logar_Promax.getCodUnidade())
@@ -427,10 +427,10 @@ async def Produtividade_Gestao_MPD():
 # Barbacena
     Unidade = "Barbacena"
     Nome = "Produtividade Gestão MPD"
-    Ativo = False
+    Ativo = True
     #03.11.40
     if(Ativo):
-        OP = "03.11.40_Taruma_GMPD"
+        OP = "GMPD_BQ_03.11.40"
         Inicio = Datas.datetime.now()
         import promax.bibliotecas.nome_bi as nb
         CName = nb.GeradorNomeArquivo(Processo_Logar_Promax.getCodUnidade())
