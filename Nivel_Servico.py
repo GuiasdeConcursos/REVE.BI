@@ -32,7 +32,7 @@ async def AtendimentoNivelServico():
     import promax.bibliotecas.DRPRX as rpx
     Processo_Logar_Promax = LoginPromax()
 
-    Ativo = True
+    Ativo = False
     #01.05.07.04.02
     if(Ativo):
         OP = "01.05.07.04.02_Taruma_NS"
@@ -45,13 +45,16 @@ async def AtendimentoNivelServico():
         wb.sheets[0].range("C4").value = Inicio
         wb.sheets[0].range("E4").value = "01_05_07_04_02"
         wb.sheets[0].range("F4").value = str(Caminho.absolute())
-        wb.sheets[0].range("H4").value = Caminho.stat().st_size
-        DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
-        wb.sheets[0].range("J4").value = DataCriacao
-
-        #Status
-        wb.sheets[0].range("E2").value = "Movendo arquivo antigo"
-        shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}.csv")
+        try:
+            wb.sheets[0].range("H4").value = Caminho.stat().st_size
+            DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
+            wb.sheets[0].range("J4").value = DataCriacao
+            #Status
+            wb.sheets[0].range("E2").value = "Movendo arquivo antigo"
+            shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}.csv")
+        except:
+            wb.sheets[0].range("H4").value = 0
+            wb.sheets[0].range("J4").value = "NX"
 
         #------------Início Classe 01_05_07_04_02
  
@@ -62,7 +65,7 @@ async def AtendimentoNivelServico():
             check_cache = await verificarCache( Path(__file__).parent / "Promax" / "cache" / "C_01_05_07_04_02" / "Taruma.csv")
             if(not check_cache):
                 saida = await C_01_05_07_04_02.solicitar_csv()
-                if(saida == "OK"):
+                if(saida[0] == True):
                     await C_01_05_07_04_02.Salvar_em(str(Caminho.absolute()))
                     await C_01_05_07_04_02.Salvar_em( Path(__file__).parent / "Promax" / "cache" / "C_01_05_07_04_02" / "Taruma.csv")
                     break
@@ -312,7 +315,7 @@ async def AtendimentoNivelServico():
     import promax.bibliotecas.DRPRX as rpx
     Processo_Logar_Promax = LoginPromax(1)
 
-    Ativo = False
+    Ativo = True
     #01.05.07.04.02
     if(Ativo):
         OP = "01.05.07.04.02_Tarumabq_NS"
@@ -325,23 +328,36 @@ async def AtendimentoNivelServico():
         wb.sheets[0].range("C16").value = Inicio
         wb.sheets[0].range("E16").value = "01_05_07_04_02"
         wb.sheets[0].range("F16").value = str(Caminho.absolute())
-        wb.sheets[0].range("H16").value = Caminho.stat().st_size
-        DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
-        wb.sheets[0].range("J16").value = DataCriacao
-
-        #Status
-        wb.sheets[0].range("E2").value = "Movendo arquivo antigo"
-        shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}.csv")
+        try:
+            wb.sheets[0].range("H16").value = Caminho.stat().st_size
+            DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
+            wb.sheets[0].range("J16").value = DataCriacao
+            #Status
+            wb.sheets[0].range("E2").value = "Movendo arquivo antigo"
+            shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}bq.csv")
+        except:
+            wb.sheets[0].range("H16").value = 0
+            wb.sheets[0].range("J16").value = "NX"
 
         #------------Início Classe 01_05_07_04_02
  
         #Status
         wb.sheets[0].range("E2").value = "Baixando arquivo CSV"
         C_01_05_07_04_02 = rpx.sitePromoax_01_05_07_04_02_GERAL(Processo_Logar_Promax)
-        await C_01_05_07_04_02.solicitar_csv()
-        await C_01_05_07_04_02.Salvar_em(str(Caminho.absolute()))
+        while True:
+            check_cache = await verificarCache( Path(__file__).parent / "Promax" / "cache" / "C_01_05_07_04_02" / "Tarumabq.csv")
+            if(not check_cache):
+                saida = await C_01_05_07_04_02.solicitar_csv()
+                if(saida[0] == True):
+                    await C_01_05_07_04_02.Salvar_em(str(Caminho.absolute()))
+                    await C_01_05_07_04_02.Salvar_em( Path(__file__).parent / "Promax" / "cache" / "C_01_05_07_04_02" / "Tarumabq.csv")
+                    break
+                else:
+                    await asyncio.sleep(120)
+            else:
+                shutil.copy(str(Path(__file__).parent / "Promax" / "cache" / "C_01_05_07_04_02" / "Tarumabq.csv"), str(Caminho.absolute()))
+                break
 
-        Caminho = Path(r"\\Mm04\z\ATENDIMENTO\NÍVEL DE SERVIÇO\01.05.07.04.02\Tarumabq.csv")
         wb.sheets[0].range("G16").value = Caminho.stat().st_size
         DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
         wb.sheets[0].range("I16").value = DataCriacao

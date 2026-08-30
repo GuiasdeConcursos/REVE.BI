@@ -12,7 +12,19 @@ def LoginPromax(unidade: int = 0):
 
     return sessao
     #------------------------------------------------------
-
+async def verificarCache(Arquivo: Path):
+    import promax.bibliotecas.data_prx as dp
+    #Arquivo = Path(__file__).parent / "Promax" / "cache" / "C_01_05_07_04_02" / "Taruma.csv"
+    if Arquivo.is_file():
+        DtHJ = dp.Datas().data_hoje()
+        DataCriacao = (Datas.datetime.fromtimestamp(Arquivo.stat().st_birthtime)).strftime("%d/%m/%Y")
+        if DataCriacao == DtHJ:
+            return True
+        else:
+            return False
+    else:
+        return False
+    
 async def Produtividade_CBEES():
 # Juiz deFora
     Unidade = "Juiz de Fora"
@@ -36,20 +48,35 @@ async def Produtividade_CBEES():
         wb.sheets[4].range("C4").value = Inicio
         wb.sheets[4].range("E4").value = "01_05_07_04_02"
         wb.sheets[4].range("F4").value = str(Caminho.absolute())
-        wb.sheets[4].range("H4").value = Caminho.stat().st_size
-        DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
-        wb.sheets[4].range("J4").value = DataCriacao
-
-        #Status
-        wb.sheets[4].range("E2").value = "Movendo arquivo antigo"
-        shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}.csv")
+        try:
+            wb.sheets[4].range("H4").value = Caminho.stat().st_size
+            DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
+            wb.sheets[4].range("J4").value = DataCriacao
+            #Status
+            wb.sheets[4].range("E2").value = "Movendo arquivo antigo"
+            shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}.csv")
+        except:
+            wb.sheets[4].range("H4").value = 0
+            wb.sheets[4].range("J4").value = "NX"
 
         #------------Início Classe 01_05_07_04_02
+ 
         #Status
         wb.sheets[4].range("E2").value = "Baixando arquivo CSV"
         C_01_05_07_04_02 = rpx.sitePromoax_01_05_07_04_02_GERAL(Processo_Logar_Promax)
-        await C_01_05_07_04_02.solicitar_csv()
-        await C_01_05_07_04_02.Salvar_em(str(Caminho.absolute()))
+        while True:
+            check_cache = await verificarCache( Path(__file__).parent / "Promax" / "cache" / "C_01_05_07_04_02" / "Taruma.csv")
+            if(not check_cache):
+                saida = await C_01_05_07_04_02.solicitar_csv()
+                if(saida[0] == True):
+                    await C_01_05_07_04_02.Salvar_em(str(Caminho.absolute()))
+                    await C_01_05_07_04_02.Salvar_em( Path(__file__).parent / "Promax" / "cache" / "C_01_05_07_04_02" / "Taruma.csv")
+                    break
+                else:
+                    await asyncio.sleep(120)
+            else:
+                shutil.copy(str(Path(__file__).parent / "Promax" / "cache" / "C_01_05_07_04_02" / "Taruma.csv"), str(Caminho.absolute()))
+                break
 
         wb.sheets[4].range("G4").value = Caminho.stat().st_size
         DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
@@ -125,20 +152,35 @@ async def Produtividade_CBEES():
         wb.sheets[4].range("C14").value = Inicio
         wb.sheets[4].range("E14").value = "01_05_07_04_02"
         wb.sheets[4].range("F14").value = str(Caminho.absolute())
-        wb.sheets[4].range("H14").value = Caminho.stat().st_size
-        DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
-        wb.sheets[4].range("J14").value = DataCriacao
-
-        #Status
-        wb.sheets[4].range("E2").value = "Movendo arquivo antigo"
-        shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}bq.csv")
+        try:
+            wb.sheets[4].range("H14").value = Caminho.stat().st_size
+            DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
+            wb.sheets[4].range("J14").value = DataCriacao
+            #Status
+            wb.sheets[4].range("E2").value = "Movendo arquivo antigo"
+            shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}bq.csv")
+        except:
+            wb.sheets[4].range("H14").value = 0
+            wb.sheets[4].range("J14").value = "NX"
 
         #------------Início Classe 01_05_07_04_02
+ 
         #Status
         wb.sheets[4].range("E2").value = "Baixando arquivo CSV"
         C_01_05_07_04_02 = rpx.sitePromoax_01_05_07_04_02_GERAL(Processo_Logar_Promax)
-        await C_01_05_07_04_02.solicitar_csv()
-        await C_01_05_07_04_02.Salvar_em(str(Caminho.absolute()))
+        while True:
+            check_cache = await verificarCache( Path(__file__).parent / "Promax" / "cache" / "C_01_05_07_04_02" / "Tarumabq.csv")
+            if(not check_cache):
+                saida = await C_01_05_07_04_02.solicitar_csv()
+                if(saida[0] == True):
+                    await C_01_05_07_04_02.Salvar_em(str(Caminho.absolute()))
+                    await C_01_05_07_04_02.Salvar_em( Path(__file__).parent / "Promax" / "cache" / "C_01_05_07_04_02" / "Tarumabq.csv")
+                    break
+                else:
+                    await asyncio.sleep(120)
+            else:
+                shutil.copy(str(Path(__file__).parent / "Promax" / "cache" / "C_01_05_07_04_02" / "Tarumabq.csv"), str(Caminho.absolute()))
+                break
 
         wb.sheets[4].range("G14").value = Caminho.stat().st_size
         DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
