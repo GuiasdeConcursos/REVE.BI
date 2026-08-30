@@ -391,7 +391,7 @@ class sitePromoax_01_11:
             if rst[0]:
                 pass
             else:
-                print("Ocooreu algum erro ao realizar o download desse arquivo: 01_11_csv")
+                print("Ocooreu algum erro ao realizar o download desse arquivo: 01_12_csv")
             
             return rst
         
@@ -2612,7 +2612,7 @@ class sitePromoax_01_09:
             self.SessionID = params.get("SessionID", [None])[0]
             self.SubSessionID = params.get("SubSessionID", [None])[0]
 
-    def baixar_csv(self, url):
+    async def baixar_csv(self, url):
         try:
             url_csv = f"http://taruma.promaxcloud.com.br{url}"
             response = requests.get(url_csv)
@@ -2736,13 +2736,13 @@ class sitePromoax_01_12:
             self.SessionID = params.get("SessionID", [None])[0]
             self.SubSessionID = params.get("SubSessionID", [None])[0]
 
-    def baixar_csv(self, url):
+    async def baixar_csv(self, url):
         try:
             url_csv = f"http://taruma.promaxcloud.com.br{url}"
             response = requests.get(url_csv)
             response.raise_for_status()
 
-            print("Salvando 11.09...")
+            print("Salvando 11.12...")
 
             with open(self.path_savar_csv, "wb") as arquivo_csv:
                 arquivo_csv.write(response.content)
@@ -2874,7 +2874,7 @@ class sitePromoax_02_05_02:
         
         print(f"Salvo em: {path}")
 
-    def baixar_csv(self, url):
+    async def baixar_csv(self, url):
         try:
             url_csv = f"http://taruma.promaxcloud.com.br{url}"
             response = requests.get(url_csv)
@@ -3031,7 +3031,7 @@ class sitePromoax_03_01_11:
         
         print(f"Salvo em: {path}")
 
-    def baixar_csv(self, url):
+    async def baixar_csv(self, url):
         try:
             url_csv = f"http://taruma.promaxcloud.com.br{url}"
             response = requests.get(url_csv)
@@ -3184,7 +3184,7 @@ class sitePromoax_03_01_36_04:
         
         print(f"Salvo em: {path}")
 
-    def baixar_csv(self, url):
+    async def baixar_csv(self, url):
         try:
             url_csv = f"http://taruma.promaxcloud.com.br{url}"
             response = requests.get(url_csv)
@@ -3352,7 +3352,7 @@ class sitePromoax_03_02_24:
         
         print(f"Salvo em: {path}")
 
-    def baixar_csv(self, url):
+    async def baixar_csv(self, url):
         try:
             url_csv = f"http://taruma.promaxcloud.com.br{url}"
             response = requests.get(url_csv)
