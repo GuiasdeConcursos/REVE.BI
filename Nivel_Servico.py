@@ -12,9 +12,9 @@ def LoginPromax(unidade: int = 0):
 
     return sessao
     #------------------------------------------------------
-async def verificarCache():
+async def verificarCache(Arquivo: Path):
     import promax.bibliotecas.data_prx as dp
-    Arquivo = Path(__file__).parent / "Promax" / "cache" / "C_01_05_07_04_02" / "Taruma.csv"
+    #Arquivo = Path(__file__).parent / "Promax" / "cache" / "C_01_05_07_04_02" / "Taruma.csv"
     if Arquivo.is_file():
         DtHJ = dp.Datas().data_hoje()
         DataCriacao = (Datas.datetime.fromtimestamp(Arquivo.stat().st_birthtime)).strftime("%d/%m/%Y")
@@ -59,7 +59,7 @@ async def AtendimentoNivelServico():
         wb.sheets[0].range("E2").value = "Baixando arquivo CSV"
         C_01_05_07_04_02 = rpx.sitePromoax_01_05_07_04_02_GERAL(Processo_Logar_Promax)
         while True:
-            check_cache = await verificarCache()
+            check_cache = await verificarCache( Path(__file__).parent / "Promax" / "cache" / "C_01_05_07_04_02" / "Taruma.csv")
             if(not check_cache):
                 saida = await C_01_05_07_04_02.solicitar_csv()
                 if(saida == "OK"):
