@@ -23,7 +23,7 @@ async def Produtividade_Ajudante():
     # Juiz deFora
     Unidade = "Juiz de Fora"
     Nome = "Ajudante"
-    Ativo = False
+    Ativo = True
     #03.02.37
     if(Ativo):
         OP = "AJ_03.02.37"
@@ -31,7 +31,7 @@ async def Produtividade_Ajudante():
         import promax.bibliotecas.nome_bi as nb
         CName = nb.GeradorNomeArquivo(Processo_Logar_Promax.getCodUnidade())
         Name = CName.obter_nome_arquivo()
-        Caminho = Path(fr"\\Mm04\z\PRODUTIVIDADE\ID AJUDANTE\03.02.37\03.02.37\{Name}")
+        Caminho = Path(fr"\\Mm04\z\PRODUTIVIDADE\ID AJUDANTE\03.02.37\{Name}")
 
         wb = xw.apps.active.books.active  
         wb.sheets[3].range("A4").value = Unidade
@@ -68,7 +68,7 @@ async def Produtividade_Ajudante():
     # Juiz deFora
     Unidade = "Juiz de Fora"
     Nome = "Ajudante"
-    Ativo = False
+    Ativo = True
     #01.11
     if(Ativo):
         OP = "AJ_01.11"
@@ -108,7 +108,7 @@ async def Produtividade_Ajudante():
 # Juiz deFora
     Unidade = "Juiz de Fora"
     Nome = "Ajudante"
-    Ativo = False
+    Ativo = True
     #01.20.01.48
     if(Ativo):
         OP = "AJ_01.20.01.48"
@@ -201,7 +201,7 @@ async def Produtividade_Ajudante():
     # Barbacena
     Unidade = "Barbacena"
     Nome = "Ajudante"
-    Ativo = False
+    Ativo = True
     #03.02.37
     if(Ativo):
         OP = "AJ_BQ_03.02.37"
@@ -209,7 +209,7 @@ async def Produtividade_Ajudante():
         import promax.bibliotecas.nome_bi as nb
         CName = nb.GeradorNomeArquivo(Processo_Logar_Promax.getCodUnidade())
         Name = CName.obter_nome_arquivo()
-        Caminho = Path(fr"\\Mm04\z\PRODUTIVIDADE\ID AJUDANTE\03.02.37\03.02.37\{Name}")
+        Caminho = Path(fr"\\Mm04\z\PRODUTIVIDADE\ID AJUDANTE\03.02.37\{Name}")
 
         wb = xw.apps.active.books.active  
         wb.sheets[3].range("A14").value = Unidade
@@ -246,7 +246,7 @@ async def Produtividade_Ajudante():
 # Barbacena
     Unidade = "Barbacena"
     Nome = "Ajudante"
-    Ativo = False
+    Ativo = True
     #01.20.01.48
     if(Ativo):
         OP = "AJ_BQ_01.20.01.48"

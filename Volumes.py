@@ -76,6 +76,7 @@ async def Volumes():
                 else:
                     await asyncio.sleep(180)
             else:
+                print("Copia de cache")
                 shutil.copy(str(Path(__file__).parent / "Promax" / "cache" / "C_01_05_07_04_02" / "Taruma.csv"), str(Caminho.absolute()))
                 break
 
@@ -315,6 +316,7 @@ async def Volumes():
                 else:
                     await asyncio.sleep(180)
             else:
+                print("Copia de cache")
                 shutil.copy(str(Path(__file__).parent / "Promax" / "cache" / "C_01_05_07_04_02" / "Tarumabq.csv"), str(Caminho.absolute()))
                 break
 
