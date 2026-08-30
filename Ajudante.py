@@ -39,17 +39,19 @@ async def Produtividade_Ajudante():
         wb.sheets[3].range("C4").value = Inicio
         wb.sheets[3].range("E4").value = "03_02_37"
         wb.sheets[3].range("F4").value = str(Caminho.absolute())
-        wb.sheets[3].range("H4").value = Caminho.stat().st_size
-        DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
-        wb.sheets[3].range("J4").value = DataCriacao
+        try:
+            wb.sheets[3].range("H4").value = Caminho.stat().st_size
+            DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
+            wb.sheets[3].range("J4").value = DataCriacao
 
-        #Status
-        wb.sheets[3].range("E2").value = "Movendo arquivo antigo"
-        shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}.csv")
-
+            #Status
+            wb.sheets[3].range("E2").value = "Movendo arquivo antigo"
+            shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}.csv")
+        finally:
+            pass
         #------------Início Classe 03_02_37
         #Status
-        wb.sheets[3].range("E2").value = "Baixando arquivo CSV"
+        wb.sheets[3].range("E2").value = "Baixando arquivo CSV "
         C_03_02_37 = rpx.sitePromoax_03_02_37_AJUD(Processo_Logar_Promax)
         await C_03_02_37.solicitar_csv()
         await C_03_02_37.Salvar_em(str(Caminho.absolute()))
@@ -81,17 +83,19 @@ async def Produtividade_Ajudante():
         wb.sheets[3].range("C5").value = Inicio
         wb.sheets[3].range("E5").value = '01_11'
         wb.sheets[3].range("F5").value = str(Caminho.absolute())
-        wb.sheets[3].range("H5").value = Caminho.stat().st_size
-        DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
-        wb.sheets[3].range("J5").value = DataCriacao
+        try:
+            wb.sheets[3].range("H5").value = Caminho.stat().st_size
+            DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
+            wb.sheets[3].range("J5").value = DataCriacao
 
-        #Status
-        wb.sheets[3].range("E2").value = "Movendo arquivo antigo"
-        shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}.csv")
-
+            #Status
+            wb.sheets[3].range("E2").value = "Movendo arquivo antigo"
+            shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}.csv")
+        finally:
+            pass
         #------------Início Classe 01_05_07_04_02
         #Status
-        wb.sheets[3].range("E2").value = "Baixando arquivo CSV"
+        wb.sheets[3].range("E2").value = "Baixando arquivo CSV "
         C01_11 = rpx.sitePromoax_01_11(Processo_Logar_Promax,r"\\Mm04\z\PRODUTIVIDADE\ID AJUDANTE\01.11\01.11.csv")
         await C01_11.solicitar_csv()
 
@@ -121,17 +125,19 @@ async def Produtividade_Ajudante():
         wb.sheets[3].range("C6").value = Inicio
         wb.sheets[3].range("E6").value = "01_20_01_48"
         wb.sheets[3].range("F6").value = str(Caminho.absolute())
-        wb.sheets[3].range("H6").value = Caminho.stat().st_size
-        DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
-        wb.sheets[3].range("J6").value = DataCriacao
+        try:
+            wb.sheets[3].range("H6").value = Caminho.stat().st_size
+            DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
+            wb.sheets[3].range("J6").value = DataCriacao
 
-        #Status
-        wb.sheets[3].range("E2").value = "Movendo arquivo antigo"
-        shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}.csv")
-
+            #Status
+            wb.sheets[3].range("E2").value = "Movendo arquivo antigo"
+            shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}.csv")
+        finally:
+            pass
         #------------Início Classe 01_20_01_48
         #Status
-        wb.sheets[3].range("E2").value = "Baixando arquivo CSV"
+        wb.sheets[3].range("E2").value = "Baixando arquivo CSV "
         C_01_20_01_48 = rpx.sitePromoax_01_20_01_48(Processo_Logar_Promax)
         await C_01_20_01_48.solicitar_csv()
         await C_01_20_01_48.Salvar_em(str(Caminho.absolute()))
@@ -165,17 +171,19 @@ async def Produtividade_Ajudante():
         wb.sheets[3].range("C7").value = Inicio
         wb.sheets[3].range("E7").value = "03_11_20"
         wb.sheets[3].range("F7").value = str(Caminho.absolute())
-        wb.sheets[3].range("H7").value = Caminho.stat().st_size
-        DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
-        wb.sheets[3].range("J7").value = DataCriacao
+        try:
+            wb.sheets[3].range("H7").value = Caminho.stat().st_size
+            DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
+            wb.sheets[3].range("J7").value = DataCriacao
 
-        #Status
-        wb.sheets[3].range("E2").value = "Movendo arquivo antigo"
-        shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}.csv")
-
+            #Status
+            wb.sheets[3].range("E2").value = "Movendo arquivo antigo"
+            shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}.csv")
+        finally:
+            pass
         #------------Início Classe 03_11_20
         #Status
-        wb.sheets[3].range("E2").value = "Baixando arquivo CSV"
+        wb.sheets[3].range("E2").value = "Baixando arquivo CSV "
         C_03_11_20 = rpx.sitePromoax_03_11_20(Processo_Logar_Promax)
         await C_03_11_20.solicitar_csv()
         await C_03_11_20.Salvar_em(str(Caminho.absolute()))
@@ -217,17 +225,19 @@ async def Produtividade_Ajudante():
         wb.sheets[3].range("C14").value = Inicio
         wb.sheets[3].range("E14").value = "03_02_37"
         wb.sheets[3].range("F14").value = str(Caminho.absolute())
-        wb.sheets[3].range("H14").value = Caminho.stat().st_size
-        DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
-        wb.sheets[3].range("J14").value = DataCriacao
+        try:
+            wb.sheets[3].range("H14").value = Caminho.stat().st_size
+            DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
+            wb.sheets[3].range("J14").value = DataCriacao
 
-        #Status
-        wb.sheets[3].range("E2").value = "Movendo arquivo antigo"
-        shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}bq.csv")
-
+            #Status
+            wb.sheets[3].range("E2").value = "Movendo arquivo antigo"
+            shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}bq.csv")
+        finally:
+            pass
         #------------Início Classe 03_02_37
         #Status
-        wb.sheets[3].range("E2").value = "Baixando arquivo CSV"
+        wb.sheets[3].range("E2").value = "Baixando arquivo CSV "
         C_03_02_37 = rpx.sitePromoax_03_02_37_AJUD(Processo_Logar_Promax)
         await C_03_02_37.solicitar_csv()
         await C_03_02_37.Salvar_em(str(Caminho.absolute()))
@@ -259,17 +269,19 @@ async def Produtividade_Ajudante():
         wb.sheets[3].range("C15").value = Inicio
         wb.sheets[3].range("E15").value = "01_20_01_48"
         wb.sheets[3].range("F15").value = str(Caminho.absolute())
-        wb.sheets[3].range("H15").value = Caminho.stat().st_size
-        DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
-        wb.sheets[3].range("J15").value = DataCriacao
+        try:
+            wb.sheets[3].range("H15").value = Caminho.stat().st_size
+            DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
+            wb.sheets[3].range("J15").value = DataCriacao
 
-        #Status
-        wb.sheets[3].range("E2").value = "Movendo arquivo antigo"
-        shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}bq.csv")
-
+            #Status
+            wb.sheets[3].range("E2").value = "Movendo arquivo antigo"
+            shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}bq.csv")
+        finally:
+            pas
         #------------Início Classe 01_20_01_48
         #Status
-        wb.sheets[3].range("E2").value = "Baixando arquivo CSV"
+        wb.sheets[3].range("E2").value = "Baixando arquivo CSV "
         C_01_20_01_48 = rpx.sitePromoax_01_20_01_48(Processo_Logar_Promax)
         await C_01_20_01_48.solicitar_csv()
         await C_01_20_01_48.Salvar_em(str(Caminho.absolute()))
@@ -303,17 +315,19 @@ async def Produtividade_Ajudante():
         wb.sheets[3].range("C16").value = Inicio
         wb.sheets[3].range("E16").value = "03_11_20"
         wb.sheets[3].range("F16").value = str(Caminho.absolute())
-        wb.sheets[3].range("H16").value = Caminho.stat().st_size
-        DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
-        wb.sheets[3].range("J16").value = DataCriacao
+        try:
+            wb.sheets[3].range("H16").value = Caminho.stat().st_size
+            DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
+            wb.sheets[3].range("J16").value = DataCriacao
 
-        #Status
-        wb.sheets[3].range("E2").value = "Movendo arquivo antigo"
-        shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}bq.csv")
-
+            #Status
+            wb.sheets[3].range("E2").value = "Movendo arquivo antigo"
+            shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}bq.csv")
+        finally:
+            pass
         #------------Início Classe 03_11_20
         #Status
-        wb.sheets[3].range("E2").value = "Baixando arquivo CSV"
+        wb.sheets[3].range("E2").value = "Baixando arquivo CSV "
         C_03_11_20 = rpx.sitePromoax_03_11_20(Processo_Logar_Promax)
         await C_03_11_20.solicitar_csv()
         await C_03_11_20.Salvar_em(str(Caminho.absolute()))

@@ -103,14 +103,16 @@ async def Atendimento_Rating():
         wb.sheets[1].range("C6").value = Inicio
         wb.sheets[1].range("E6").value = "01_20_01_47"
         wb.sheets[1].range("F6").value = str(Caminho.absolute())
-        wb.sheets[1].range("H6").value = Caminho.stat().st_size
-        DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
-        wb.sheets[1].range("J6").value = DataCriacao
+        try:
+            wb.sheets[1].range("H6").value = Caminho.stat().st_size
+            DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
+            wb.sheets[1].range("J6").value = DataCriacao
 
-        #Status
-        wb.sheets[1].range("E2").value = "Movendo arquivo antigo"
-        shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}.csv")
-
+            #Status
+            wb.sheets[1].range("E2").value = "Movendo arquivo antigo"
+            shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}.csv")
+        finally:
+            pass
         #------------Início Classe 01_20_01_47
         #Status
         wb.sheets[1].range("E2").value = "Baixando arquivo CSV"
@@ -145,14 +147,16 @@ async def Atendimento_Rating():
         wb.sheets[1].range("C7").value = Inicio
         wb.sheets[1].range("E7").value = "01_20_01_48"
         wb.sheets[1].range("F7").value = str(Caminho.absolute())
-        wb.sheets[1].range("H7").value = Caminho.stat().st_size
-        DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
-        wb.sheets[1].range("J7").value = DataCriacao
+        try:
+            wb.sheets[1].range("H7").value = Caminho.stat().st_size
+            DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
+            wb.sheets[1].range("J7").value = DataCriacao
 
-        #Status
-        wb.sheets[1].range("E2").value = "Movendo arquivo antigo"
-        shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}.csv")
-
+            #Status
+            wb.sheets[1].range("E2").value = "Movendo arquivo antigo"
+            shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}.csv")
+        finally:
+            pass
         #------------Início Classe 01_20_01_48
         #Status
         wb.sheets[1].range("E2").value = "Baixando arquivo CSV"
@@ -191,14 +195,16 @@ async def Atendimento_Rating():
         wb.sheets[1].range("C8").value = Inicio
         wb.sheets[1].range("E8").value = "03_02_37"
         wb.sheets[1].range("F8").value = str(Caminho.absolute())
-        wb.sheets[1].range("H8").value = Caminho.stat().st_size
-        DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
-        wb.sheets[1].range("J8").value = DataCriacao
+        try:
+            wb.sheets[1].range("H8").value = Caminho.stat().st_size
+            DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
+            wb.sheets[1].range("J8").value = DataCriacao
 
-        #Status
-        wb.sheets[1].range("E2").value = "Movendo arquivo antigo"
-        shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}.csv")
-
+            #Status
+            wb.sheets[1].range("E2").value = "Movendo arquivo antigo"
+            shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}.csv")
+        finally:
+            pass
         #------------Início Classe 03_02_37
 
         #Status
@@ -294,14 +300,16 @@ async def Atendimento_Rating():
         wb.sheets[1].range("C16").value = Inicio
         wb.sheets[1].range("E16").value = "01_20_01_47"
         wb.sheets[1].range("F16").value = str(Caminho.absolute())
-        wb.sheets[1].range("H16").value = Caminho.stat().st_size
-        DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
-        wb.sheets[1].range("J16").value = DataCriacao
+        try:
+            wb.sheets[1].range("H16").value = Caminho.stat().st_size
+            DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
+            wb.sheets[1].range("J16").value = DataCriacao
 
-        #Status
-        wb.sheets[1].range("E2").value = "Movendo arquivo antigo"
-        shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}.csv")
-
+            #Status
+            wb.sheets[1].range("E2").value = "Movendo arquivo antigo"
+            shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}.csv")
+        finally:
+            pass
         #------------Início Classe 01_20_01_47
         #Status
         wb.sheets[1].range("E2").value = "Baixando arquivo CSV"
@@ -336,14 +344,16 @@ async def Atendimento_Rating():
         wb.sheets[1].range("C17").value = Inicio
         wb.sheets[1].range("E17").value = "01_20_01_48"
         wb.sheets[1].range("F17").value = str(Caminho.absolute())
-        wb.sheets[1].range("H17").value = Caminho.stat().st_size
-        DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
-        wb.sheets[1].range("J17").value = DataCriacao
+        try:
+            wb.sheets[1].range("H17").value = Caminho.stat().st_size
+            DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
+            wb.sheets[1].range("J17").value = DataCriacao
 
-        #Status
-        wb.sheets[1].range("E2").value = "Movendo arquivo antigo"
-        shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}.csv")
-
+            #Status
+            wb.sheets[1].range("E2").value = "Movendo arquivo antigo"
+            shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}.csv")
+        finally:
+            pass
         #------------Início Classe 01_20_01_48
         #Status
         wb.sheets[1].range("E2").value = "Baixando arquivo CSV"
@@ -382,14 +392,16 @@ async def Atendimento_Rating():
         wb.sheets[1].range("C18").value = Inicio
         wb.sheets[1].range("E18").value = "03_02_37"
         wb.sheets[1].range("F18").value = str(Caminho.absolute())
-        wb.sheets[1].range("H18").value = Caminho.stat().st_size
-        DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
-        wb.sheets[1].range("J18").value = DataCriacao
+        try:
+            wb.sheets[1].range("H18").value = Caminho.stat().st_size
+            DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
+            wb.sheets[1].range("J18").value = DataCriacao
 
-        #Status
-        wb.sheets[1].range("E2").value = "Movendo arquivo antigo"
-        shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}.csv")
-
+            #Status
+            wb.sheets[1].range("E2").value = "Movendo arquivo antigo"
+            shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}.csv")
+        finally:
+            pass
         #------------Início Classe 03_02_37
 
         #Status

@@ -35,7 +35,7 @@ async def Produtividade_CBEES():
     # Juiz deFora
     Unidade = "Juiz de Fora"
     Nome = "CBEES"
-    Ativo = False
+    Ativo = True
     #01.05.07.04.02
     if(Ativo):
         OP = "BE_01.05.07.04.02"
@@ -105,14 +105,16 @@ async def Produtividade_CBEES():
         wb.sheets[4].range("C5").value = Inicio
         wb.sheets[4].range("E5").value = '01_11'
         wb.sheets[4].range("F5").value = str(Caminho.absolute())
-        wb.sheets[4].range("H5").value = Caminho.stat().st_size
-        DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
-        wb.sheets[4].range("J5").value = DataCriacao
+        try:
+            wb.sheets[4].range("H5").value = Caminho.stat().st_size
+            DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
+            wb.sheets[4].range("J5").value = DataCriacao
 
-        #Status
-        wb.sheets[4].range("E2").value = "Movendo arquivo antigo"
-        shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}.csv")
-
+            #Status
+            wb.sheets[4].range("E2").value = "Movendo arquivo antigo"
+            shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}.csv")
+        finally:
+            pass
         #------------Início Classe 01_11
         #Status
         wb.sheets[4].range("E2").value = "Baixando arquivo CSV"
@@ -140,7 +142,7 @@ async def Produtividade_CBEES():
     # Barbacena
     Unidade = "Barbacena"
     Nome = "CBEES"
-    Ativo = False
+    Ativo = True
     #01.05.07.04.02
     if(Ativo):
         OP = "BE_01.05.07.04.02"

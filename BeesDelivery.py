@@ -106,14 +106,16 @@ async def BeesDelivery():
         wb.sheets[7].range("C5").value = Inicio
         wb.sheets[7].range("E5").value = "01_20_01_47"
         wb.sheets[7].range("F5").value = str(Caminho.absolute())
-        wb.sheets[7].range("H5").value = Caminho.stat().st_size
-        DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
-        wb.sheets[7].range("J5").value = DataCriacao
+        try:
+            wb.sheets[7].range("H5").value = Caminho.stat().st_size
+            DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
+            wb.sheets[7].range("J5").value = DataCriacao
 
-        #Status
-        wb.sheets[7].range("E2").value = "Movendo arquivo antigo"
-        shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}.csv")
-
+            #Status
+            wb.sheets[7].range("E2").value = "Movendo arquivo antigo"
+            shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}.csv")
+        finally:
+            pass
         #------------Início Classe 01_20_01_47
         #Status
         wb.sheets[7].range("E2").value = "Baixando arquivo CSV"
@@ -150,14 +152,16 @@ async def BeesDelivery():
         wb.sheets[7].range("C6").value = Inicio
         wb.sheets[7].range("E6").value = "03_11_20"
         wb.sheets[7].range("F6").value = str(Caminho.absolute())
-        wb.sheets[7].range("H6").value = Caminho.stat().st_size
-        DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
-        wb.sheets[7].range("J6").value = DataCriacao
+        try:
+            wb.sheets[7].range("H6").value = Caminho.stat().st_size
+            DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
+            wb.sheets[7].range("J6").value = DataCriacao
 
-        #Status
-        wb.sheets[7].range("E2").value = "Movendo arquivo antigo"
-        shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}.csv")
-
+            #Status
+            wb.sheets[7].range("E2").value = "Movendo arquivo antigo"
+            shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}.csv")
+        finally:
+            pass
         #------------Início Classe 03_11_20
         #Status
         wb.sheets[7].range("E2").value = "Baixando arquivo CSV"
@@ -301,14 +305,16 @@ async def BeesDelivery():
         wb.sheets[7].range("C15").value = Inicio
         wb.sheets[7].range("E15").value = "01_20_01_47"
         wb.sheets[7].range("F15").value = str(Caminho.absolute())
-        wb.sheets[7].range("H15").value = Caminho.stat().st_size
-        DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
-        wb.sheets[7].range("J15").value = DataCriacao
+        try:
+            wb.sheets[7].range("H15").value = Caminho.stat().st_size
+            DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
+            wb.sheets[7].range("J15").value = DataCriacao
 
-        #Status
-        wb.sheets[7].range("E2").value = "Movendo arquivo antigo"
-        shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}bq.csv")
-
+            #Status
+            wb.sheets[7].range("E2").value = "Movendo arquivo antigo"
+            shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}bq.csv")
+        finally:
+            pass
         #------------Início Classe 01_20_01_47
         #Status
         wb.sheets[7].range("E2").value = "Baixando arquivo CSV"
@@ -345,14 +351,16 @@ async def BeesDelivery():
         wb.sheets[7].range("C16").value = Inicio
         wb.sheets[7].range("E16").value = "03_11_20"
         wb.sheets[7].range("F16").value = str(Caminho.absolute())
-        wb.sheets[7].range("H16").value = Caminho.stat().st_size
-        DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
-        wb.sheets[7].range("J16").value = DataCriacao
+        try:
+            wb.sheets[7].range("H16").value = Caminho.stat().st_size
+            DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
+            wb.sheets[7].range("J16").value = DataCriacao
 
-        #Status
-        wb.sheets[7].range("E2").value = "Movendo arquivo antigo"
-        shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}bq.csv")
-
+            #Status
+            wb.sheets[7].range("E2").value = "Movendo arquivo antigo"
+            shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}bq.csv")
+        finally
+            pass
         #------------Início Classe 03_11_20
         #Status
         wb.sheets[7].range("E2").value = "Baixando arquivo CSV"
@@ -389,14 +397,16 @@ async def BeesDelivery():
         wb.sheets[7].range("C17").value = Inicio
         wb.sheets[7].range("E17").value = "03_02_24"
         wb.sheets[7].range("F17").value = str(Caminho.absolute())
-        wb.sheets[7].range("H17").value = Caminho.stat().st_size
-        DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
-        wb.sheets[7].range("J17").value = DataCriacao
+        try:
+            wb.sheets[7].range("H17").value = Caminho.stat().st_size
+            DataCriacao = Datas.datetime.fromtimestamp(Caminho.stat().st_birthtime)
+            wb.sheets[7].range("J17").value = DataCriacao
 
-        #Status
-        wb.sheets[7].range("E2").value = "Movendo arquivo antigo"
-        shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}bq.csv")
-
+            #Status
+            wb.sheets[7].range("E2").value = "Movendo arquivo antigo"
+            shutil.move(str(Caminho), f"c:\\ArquivosAntigos\\{OP}bq.csv")
+        finally:
+            pass
         #------------Início Classe 03_02_24
         #Status
         wb.sheets[7].range("E2").value = "Baixando arquivo CSV"
